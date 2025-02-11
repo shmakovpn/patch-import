@@ -6,7 +6,13 @@
 
 Sometimes it is necessary to disable the real import of a Python module and replace the import result with a mock object.
 
-Example:
+## Installation
+
+```bash
+pip install patch-import
+```
+
+## Example
 
 ```py
 import pytest
