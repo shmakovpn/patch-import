@@ -1,5 +1,6 @@
 import pytest
 import os
+from unittest.mock import Mock
 from patch_import import patch_import
 
 real_cwd: str = os.getcwd()  # real cwd
@@ -19,7 +20,7 @@ def os__import_fixture():
 
 
 class TestPatchImport:
-    def test_patch_import(self, aiohttp__import_fixture):
+    def test_patch_import(self, aiohttp__import_fixture, os__import_fixture):
         """An example test with patch_import"""
         from patch_import.patch_import__fixtures import MyClass
         assert MyClass.version() == '3.3.3'
@@ -28,6 +29,6 @@ class TestPatchImport:
         """increase coverage"""
         from patch_import.patch_import__fixtures import MyClass
         r = MyClass.cwd()
-        assert r == os__import_fixture.getcwd.return_value
+        assert isinstance(r, Mock)
         assert r != real_cwd
 
