@@ -32,3 +32,11 @@ class TestPatchImport:
         assert isinstance(r, Mock)
         assert r != real_cwd
 
+    def test_patch_import__exceptions(self):
+        """increase coverage, test exception re-raise"""
+        class SomeError(Exception):
+            pass
+
+        with pytest.raises(SomeError):
+            with patch_import('sys'):
+                raise SomeError
