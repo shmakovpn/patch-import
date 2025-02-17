@@ -3,6 +3,9 @@
 ![Tests](https://github.com/shmakovpn/patch-import/actions/workflows/python-package.yml/badge.svg)
 [![codecov](https://codecov.io/github/shmakovpn/patch-import/graph/badge.svg?token=744XXMAKOZ)](https://codecov.io/github/shmakovpn/patch-import)
 ![Mypy](https://github.com/shmakovpn/patch-import/actions/workflows/mypy.yml/badge.svg)
+[![pypi](https://img.shields.io/pypi/v/patch-import.svg)](https://pypi.python.org/pypi/patch-import)
+[![downloads](https://static.pepy.tech/badge/patch-import/month)](https://pepy.tech/project/patch-import)
+[![versions](https://img.shields.io/pypi/pyversions/patch-import.svg)](https://github.com/shmakovpn/patch-import)
 
 Sometimes it is necessary to disable the real import of a Python module and replace the import result with a mock object.
 
